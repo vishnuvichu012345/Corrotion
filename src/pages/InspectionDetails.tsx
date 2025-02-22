@@ -24,9 +24,9 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs";
 import { useNavigate } from "react-router-dom";
-import image1 from '../assets/image/Bottom Plate.avif'
+import image1 from '../assets/image/corrosion33.png'
 import image2 from '../assets/image/bottom_plate3.jpeg'
-import image3 from '../assets/image/Bottom Plate.avif'
+import image3 from '../assets/image/corrrotion22.jpeg'
 import image4 from '../assets/image/bottom_plate5.jpeg'
 import image5 from '../assets/image/bottom_plate6.jpeg'
 import image6 from '../assets/image/bottom_plate4.jpeg'
