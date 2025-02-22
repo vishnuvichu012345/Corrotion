@@ -17,9 +17,9 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen min-w-full relative flex items-center justify-center bg-[url('/src/assets/image/coverpage.png')]">
-      <div className="z-10 w-full px-4 md:px-6 flex flex-col md:flex-row items-center justify-between max-w-5xl mx-auto gap-8">
+      <div className="z-10 w-full px-4 md:px-6 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto gap-8">
         <div className="text-white space-y-4 text-center md:text-left w-6/12">
-          <h1 className="text-4xl  md:text-5xl lg:text-6xl font-bold !leading-[80px]">
+          <h1 className="text-4xl  md:text-5xl lg:text-7xl font-bold !leading-[96px]">
             " Experience
             <br />
             AI-Driven Corrosion 
@@ -28,13 +28,13 @@ export default function LoginPage() {
           </h1>
         </div>
 
-        <Card className="w-full md:w-[400px] shadow-xl bg-white">
+        <Card className="w-full md:max-w-[500px] py-4 shadow-xl bg-white">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-center">Login</CardTitle>
+            <CardTitle className="text-4xl font-bold text-center">Login</CardTitle>
           </CardHeader>
           <CardContent>
-            <form className="space-y-4">
-              <div className="text-sm text-center space-x-1">
+            <form className="space-y-6">
+              <div className="text-xl text-center space-x-1">
                 <span className="text-muted-foreground">Don&apos;t have an account?</span>
                 <a href="/signup" className="text-blue-600 hover:underline font-medium">
                   Sign Up
@@ -42,12 +42,14 @@ export default function LoginPage() {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium">
+                <label htmlFor="email" className="text-base font-medium">
                   Email
                 </label>
                 <Input
                   id="email"
                   type="email"
+                 className="!text-input !rounded-[4px] !p-4"
+                  
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
@@ -56,12 +58,13 @@ export default function LoginPage() {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="password" className="text-sm font-medium">
+                <label htmlFor="password" className="text-base font-medium">
                   Password
                 </label>
                 <Input
                   id="password"
                   type="password"
+                   className="!text-input !rounded-[4px] !p-4"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
@@ -75,7 +78,7 @@ export default function LoginPage() {
                 </a>
               </div>
 
-              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white" onClick={()=>navigate('/')}>
+              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white !text-xl !py-5" onClick={()=>navigate('/dashboard')}>
                 Login
               </Button>
             </form>

@@ -14,23 +14,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    // Check for existing session
-    const checkAuth = async () => {
-      try {
-        const session = localStorage.getItem('user');
-        if (session) {
-          setUser(JSON.parse(session));
-        }
-      } catch (error) {
-        console.error('Auth check failed:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   // Check for existing session
+  //   const checkAuth = async () => {
+  //     try {
+  //       const session = localStorage.getItem('user');
+  //       if (session) {
+  //         setUser(JSON.parse(session));
+  //       }
+  //     } catch (error) {
+  //       console.error('Auth check failed:', error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    checkAuth();
-  }, []);
+  //   checkAuth();
+  // }, []);
 
   const login = async (email: string, password?: string) => {
     // Mock login - replace with actual authentication

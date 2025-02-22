@@ -7,6 +7,7 @@ import InspectionFindings from './pages/InspectionFindings';
 import InspectionDetailView from './pages/InspectionDetails';
 import InspectionPhotos from './pages/InspectionPhotos';
 import InspectionHistory from './pages/InspectionHistory';
+import NewInspection from './pages/newInspection';
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
 
 
@@ -18,9 +19,9 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<LoginPage />} />
           <Route
-            path="/"
+            path="/dashboard"
             element={
               <ProtectedRoute>
                 <DashboardLayout />
@@ -57,6 +58,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <InspectionHistory/>
+              </ProtectedRoute>
+            }
+          />
+             <Route
+            path="/newinspection"
+            element={
+              <ProtectedRoute>
+                <NewInspection/>
               </ProtectedRoute>
             }
           />
