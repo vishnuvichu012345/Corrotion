@@ -8,6 +8,7 @@ import InspectionDetailView from './pages/InspectionDetails';
 import InspectionPhotos from './pages/InspectionPhotos';
 import InspectionHistory from './pages/InspectionHistory';
 import NewInspection from './pages/newInspection';
+import Dashboard from './pages/Dashboard';
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
 
 
@@ -24,7 +25,7 @@ function App() {
             path="/dashboard"
             element={
               <ProtectedRoute>
-                <DashboardLayout />
+                <Dashboard />
               </ProtectedRoute>
             }
           />

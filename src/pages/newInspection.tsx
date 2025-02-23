@@ -20,16 +20,18 @@ import {
 import image3 from '../assets/image/Shell Course Surface Corrosion.jpeg'
 import image4 from '../assets/image/shell cource Wall Thinning.jpg'
 import image5 from '..//assets/image/Flange Corrosion.jpeg'
+import { useNavigate } from 'react-router-dom';
 
 const NewInspection = () => {
   const [photos, setPhotos] = useState([]);
+    const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-4">
-          <button className="flex items-center text-gray-600 hover:text-gray-900">
+          <button className="flex items-center text-gray-600 hover:text-gray-900"  onClick={()=>navigate('/dashboard')}>
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Inspections
           </button>
